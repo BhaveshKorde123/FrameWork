@@ -8,25 +8,23 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import Utility.ReadProperty;
 import io.github.bonigarcia.wdm.WebDriverManager;
-
+//This is demo changes done by bhavesh korde
 public class TestBase {
 	
 	public static WebDriver driver;
-	
-	
-	public	void	initalization()	throws	Exception
+	public void	initalization() throws Exception
 	{
-	String	browserValue	=	ReadProperty.readPropertyFile("browser");
+	  String browserValue = ReadProperty.readPropertyFile("browser"));
 	if(browserValue.equals("chrome"))
 	{
-	WebDriverManager.chromedriver().setup();
-	driver	=	new	ChromeDriver();
+	     WebDriverManager.chromedriver().setup();
+	     driver=new ChromeDriver();
 	}
 	
-	else	if(browserValue.equals("firefox"))
+	else if(browserValue.equals("firefox"))
 	{
-	WebDriverManager.firefoxdriver().setup();
-	driver	=	new	FirefoxDriver();
+	   WebDriverManager.firefoxdriver().setup();
+	     driver	=new	FirefoxDriver();
 	}
 	else	if(browserValue.equals("edge"))
 	{
